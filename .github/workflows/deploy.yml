@@ -33,6 +33,14 @@ jobs:
       - name: Build
         run: npm run build
       
+      - name: Verify 404.html exists
+        run: |
+          if [ ! -f "./dist/404.html" ]; then
+            echo "404.html not found, creating it..."
+            cp ./dist/index.html ./dist/404.html
+          fi
+          ls -la ./dist/ | grep -E "404|index"
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
