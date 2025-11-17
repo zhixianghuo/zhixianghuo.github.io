@@ -1,0 +1,239 @@
+.about {
+  padding: 6rem 2rem;
+  background: white;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+.social-links h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.social-icon-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.social-icon-btn.github {
+  background: #333;
+  color: white;
+  box-shadow: 0 2px 8px rgba(51, 51, 51, 0.2);
+}
+
+.social-icon-btn.github:hover {
+  background: #1a1a1a;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(51, 51, 51, 0.4);
+}
+
+.social-icon-btn.linkedin {
+  background: #0077b5;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 119, 181, 0.2);
+}
+
+.social-icon-btn.linkedin:hover {
+  background: #005885;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 119, 181, 0.4);
+}
+
+.social-icon-btn.email {
+  background: #2c3e50;
+  color: white;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2);
+}
+
+.social-icon-btn.email:hover {
+  background: #1a252f;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(44, 62, 80, 0.4);
+}
+
+.skills h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Skill Categories */
+.skill-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.category-btn {
+  padding: 0.6rem 1.2rem;
+  background: white;
+  border: 2px solid #e0e0e0;
+  color: #666;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  border-color: #2c3e50;
+  color: #2c3e50;
+  transform: translateY(-2px);
+}
+
+.category-btn.active {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border-color: #2c3e50;
+  color: white;
+  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  animation: fadeInSkills 0.4s ease-in-out;
+}
+
+@keyframes fadeInSkills {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Skill Pill */
+.skill-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.2rem;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-pill:hover {
+  border-color: #2c3e50;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.15);
+}
+
+.skill-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.skill-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .skill-categories {
+    gap: 0.4rem;
+  }
+
+  .category-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.8rem;
+  }
+
+  .skill-pill {
+    padding: 0.6rem 1rem;
+  }
+
+  .skill-icon {
+    font-size: 1.3rem;
+  }
+
+  .skill-name {
+    font-size: 0.85rem;
+  }
+}
+

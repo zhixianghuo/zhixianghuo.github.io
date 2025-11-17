@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 主要内容 */
+main {
+  flex: 1;
+  margin-top: 60px;
+  min-height: calc(100vh - 60px - 100px);
+}
+
