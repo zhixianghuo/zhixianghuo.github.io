@@ -8,7 +8,7 @@ import ContactPage from './pages/ContactPage'
 
 function App() {
   return (
-    <Router basename="/portfolio">
+    <Router>
       <div className="app">
         <Navbar />
         <main>

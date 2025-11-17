@@ -49,7 +49,7 @@ function Hero() {
           </div>
         </div>
         <div className="hero-image">
-          <img src="/portfolio/personalImage.png" alt="Zhixiang Huo" className="hero-portrait" />
+          <img src="/personalImage.png" alt="Zhixiang Huo" className="hero-portrait" />
         </div>
       </div>
     </section>
